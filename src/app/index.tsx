@@ -1,5 +1,12 @@
-import { Text } from "react-native";
+import { Text, View, FlatList } from "react-native";
+import { meditations } from "../dummy_data";
+import MeditationCard from "../components/MeditationCard";
 
 export default function HomeScreen() {
-  return <Text>Hello World</Text>;
+  return (
+    <FlatList
+      data={meditations}
+      renderItem={({ item }) => <MeditationCard meditation={item} />}
+    />
+  );
 }
