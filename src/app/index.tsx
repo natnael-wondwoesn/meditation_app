@@ -6,6 +6,8 @@ export default function HomeScreen() {
   return (
     <FlatList
       data={meditations}
+      className="bg-white"
+      contentContainerClassName="p-4"
       renderItem={({ item }) => <MeditationCard meditation={item} />}
     />
   );
